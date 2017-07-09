@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { :omniauth_callbacks => "omniauth_callbacks" }
   root  'static_pages#home'
 
   match '/music', to: 'static_pages#music', via: 'get' #match=一致,musicという名前のところ一致したら飛びますってこと
